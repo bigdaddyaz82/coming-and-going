@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming and Going, LLC</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #fefefe, #f5f5ff);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(to right, #111, #333);
+      color: #f4f4f4;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header p {
+      font-style: italic;
+      font-size: 1.3rem;
+      color: #ddd;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+    h2 {
+      color: #6a1b9a;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      background-color: #e8f0ff;
+      margin-bottom: 0.75rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background: #111;
+      color: #f0f0f0;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    a {
+      color: #6a1b9a;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight {
+      background-color: #ffe082;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .rain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .drop {
+      position: absolute;
+      width: 2px;
+      height: 15px;
+      background: rgba(0,0,255,0.3);
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-100px); }
+      100% { transform: translateY(100vh); }
+    }
+    .umbrella {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 3rem;
+      z-index: 3;
+    }
+    .testimonials {
+      background-color: #fff8e1;
+      border-left: 4px solid #ffca28;
+      padding: 1rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-style: italic;
+      min-height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="rain" id="rain"></div>
+  <div class="umbrella">☂️</div>
+  <header>
+    <h1>Coming and Going, LLC</h1>
+    <p>"Whether you're coming or going, we got you covered."</p>
+  </header>  <section>
+    <h2>💥 What We Do</h2>
+    <p>From life's <span class="highlight">first thrills</span> to its <span class="highlight">final rest</span>, we provide <strong>premium condoms</strong> and <strong>handcrafted coffins</strong> — because protection matters at every stage.</p><h2>🛡️ Our Products</h2>
+<ul>
+  <li><strong>Condoms</strong> – Safe, sustainable, and sensual for every encounter.</li>
+  <li><strong>Coffins</strong> – Affordable, elegant, and made with care for your loved ones.</li>
+</ul>
+
+<h2>📦 Bundles & Promotions</h2>
+<ul>
+  <li><em>The Life Cycle Box</em> – One box. Start to finish.</li>
+  <li><em>Date to Death Discount</em> – Couples packages with dual protection.</li>
+</ul>
+
+<h2>🗣️ Testimonials</h2>
+<div class="testimonials" id="testimonialBox">"These guys really nailed it — in more ways than one!" – Jamie T.</div>
+
+<h2>📫 Contact Us</h2>
+<p>Questions, orders, or dark humor inquiries?</p>
+<p>Email: <a href="mailto:contact@comingandgoing.com">contact@comingandgoing.com</a></p>
+<p>Instagram: <a href="https://instagram.com/comingandgoingco" target="_blank">@comingandgoingco</a></p>
+<p>📍 Based in Your Phoenix,AZ USA — shipping nationwide</p>
+
+  </section>  <footer>
+    <p>&copy; 2025 Coming and Going, LLC. All rights reserved.</p>
+  </footer>  <script>
+    // Rain animation
+    const rain = document.getElementById('rain');
+    for (let i = 0; i < 100; i++) {
+      const drop = document.createElement('div');
+      drop.className = 'drop';
+      drop.style.left = Math.random() * 100 + 'vw';
+      drop.style.animationDuration = 0.5 + Math.random() * 0.5 + 's';
+      drop.style.animationDelay = Math.random() * 5 + 's';
+      rain.appendChild(drop);
+    }
+
+    // Testimonial rotator
+    const testimonials = [
+      '"These guys really nailed it — in more ways than one!" – Jamie T.',
+      '"Best packaging I’ve ever seen, and I’m a mortician." – Lenny G.',
+      '"The coffin was beautiful. The night before, even better." – Michelle D.',
+      '"Creative, classy, and covered. 10/10." – Rohan S.',
+      '"Never thought I’d laugh while buying condoms *and* a coffin." – Ashley P.',
+      '"Their slogan got me, their service kept me." – Felix R.'
+    ];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById('testimonialBox').innerText = testimonials[i];
+      i = (i + 1) % testimonials.length;
+    }, 5000);
+  </script></body>
+</html>
