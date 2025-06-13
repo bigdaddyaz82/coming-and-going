@@ -2,258 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming and Going Condom & Coffin Company</title>
-  <title>Coming and Going Company – Condoms & Coffins</title>
-  <meta name="description" content="Coming and Going Company - Premium condoms and handcrafted coffins. Whether you're coming or going, we got you covered." />
-  <meta name="keywords" content="condoms, coffins, premium condoms, handcrafted coffins, protection, coming and going, life products" />
-  <meta name="author" content="Coming and Going Company" />
-  <link rel="canonical" href="https://bigdaddyaz82.github.io/coming-and-going/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming & Going</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #fefefe, #f5f5ff);
-      color: #333;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      position: relative;
+      background: #121212;
+      color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #d1e3ff, #ffffff);
-      color: #222;
-      overflow-x: hidden;
+      overflow: hidden;
     }
-    header {
-      background: linear-gradient(to right, #111, #333);
-      color: #f4f4f4;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      position: relative;
-      z-index: 2;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-weight: 700;
-    }
-    header p {
-      font-style: italic;
-      font-size: 1.3rem;
-      color: #ddd;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      position: relative;
-      z-index: 2;
-    }
-    h2 {
-      color: #6a1b9a;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.3rem;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      background-color: #e8f0ff;
-      margin-bottom: 0.75rem;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    footer {
-      background: #111;
-      color: #f0f0f0;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      position: relative;
-      z-index: 2;
-    }
-    a {
-      color: #6a1b9a;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .highlight {
-      background-color: #ffe082;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-
-    .rain {
-      position: fixed;
-      top: 0;
-@@ -87,92 +26,106 @@
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .drop {
-      position: absolute;
-      background: rgba(0, 0, 0, 0.1);
-      width: 2px;
-      height: 15px;
-      background: rgba(0,0,255,0.3);
-      position: absolute;
-      animation: fall linear infinite;
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(-100px); }
-      100% { transform: translateY(100vh); }
-      0% {
-        top: -20px;
-        opacity: 0;
-      }
-      30% {
-        opacity: 1;
-      }
-      100% {
-        top: 100%;
-        opacity: 0;
-      }
-    }
-    .umbrella {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-
-    .container {
-      text-align: center;
-      padding: 5rem 2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    h1 {
-      font-size: 3rem;
-      z-index: 3;
-      margin-bottom: 0.5rem;
-      color: #0b3d91;
-    }
-
-    h2 {
-      font-weight: normal;
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .umbrella {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
-
-    .testimonials {
-      background-color: #fff8e1;
-      border-left: 4px solid #ffca28;
-      padding: 1rem;
-      margin-top: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-top: 3rem;
-      font-style: italic;
-      min-height: 60px;
-      font-size: 1.2rem;
-      height: 60px;
+    .hero {
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: #555;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .umbrella {
+      width: 100px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    .rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2) 2px,
+        transparent 2px,
+        transparent 10px
+      );
+      animation: rain 0.5s linear infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+    @keyframes rain {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 10px;
+      }
+    }
+    .testimonial-box {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      width: 80%;
+      max-width: 600px;
+      transition: opacity 1s ease-in-out;
+    }
+    .fade {
+      opacity: 0;
+    }
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
-  <div class="rain" id="rain"></div>
-  <div class="umbrella">☂️</div>
-  <header>
-    <h1>Coming and Going Condom & Coffin Company </h1>
-    <p>"Whether you're coming or going, we got you covered."</p>
-  </header>  <section>
-    <h2>💥 What We Do</h2>
-    <p>From life's <span class="highlight">first thrills</span> to its <span class="highlight">final rest</span>, we provide <strong>premium condoms</strong> and <strong>handcrafted coffins</strong> — because protection matters at every stage.</p><h2>🛡️ Our Products</h2>
-<ul>
-  <li><strong>Condoms</strong> – Safe, sustainable, and sensual for every encounter.</li>
-  <li><strong>Coffins</strong> – Affordable, elegant, and made with care for your loved ones.</li>
-</ul>
-
-<h2>📦 Bundles & Promotions</h2>
-<ul>
-  <li><em>The Life Cycle Box</em> – One box. Start to finish.</li>
-  <li><em>Date to Death Discount</em> – Couples packages with dual protection.</li>
-</ul>
-
-<h2>🗣️ Testimonials</h2>
-<div class="testimonials" id="testimonialBox">"These guys really nailed it — in more ways than one!" – Jamie T.</div>
-  <div class="container">
-    <div class="umbrella">☂️</div>
-    <h1>Coming and Going Company</h1>
-    <h2>Whether you're coming or going, we got you covered.</h2>
-
-<h2>📫 Contact Us</h2>
-<p>Questions, orders, or dark humor inquiries?</p>
-<p>Email: <a href="mailto:contact@comingandgoing.com">contact@comingandgoing.com</a></p>
-<p>Instagram: <a href="https://instagram.com/comingandgoingco" target="_blank">@comingandgoingco</a></p>
-<p>📍 Based in Phoenix,AZ USA — shipping nationwide</p>
-    <div class="testimonials" id="testimonial">
-      “Best protection and best send-off. Genius.”
-    </div>
+  <div class="rain"></div>
+  <div class="hero">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Umbrella_icon.svg/1024px-Umbrella_icon.svg.png" alt="Umbrella" class="umbrella" />
+    <h1>Coming & Going</h1>
+    <p>Whether you're coming or going, we got you covered.</p>
+    <div id="testimonial" class="testimonial-box">"I came for the protection, stayed for the punchline." – Alex W.</div>
   </div>
+  <footer>
+    &copy; 2025 Coming & Going Co. All rights reserved. THIS IS A JOKE 🫶
+  </footer>
 
-  </section>  <footer>
-    <p>&copy; 2025 Coming and Going Company. Established by Bigdaddyaz82 All rights reserved.</p>
-  </footer>  <script>
-    // Rain animation
-    const rain = document.getElementById('rain');
-    for (let i = 0; i < 100; i++) {
   <script>
-    // Rain Animation
-    const rainContainer = document.getElementById('rain');
-    for (let i = 0; i < 200; i++) {
-      const drop = document.createElement('div');
-      drop.className = 'drop';
-      drop.style.left = Math.random() * 100 + 'vw';
-      drop.style.animationDuration = 0.5 + Math.random() * 0.5 + 's';
-      drop.style.animationDuration = (Math.random() * 1 + 0.5) + 's';
-      drop.style.animationDelay = Math.random() * 5 + 's';
-      rain.appendChild(drop);
-      rainContainer.appendChild(drop);
-    }
-
-    // Testimonial rotator
-    // Testimonials
     const testimonials = [
-      '"These guys really nailed it — in more ways than one!" – Jamie T.',
-      '"Best packaging I’ve ever seen, and I’m a mortician." – Lenny G.',
-      '"The coffin was beautiful. The night before, even better." – Michelle D.',
-      '"Creative, classy, and covered. 10/10." – Rohan S.',
-      '"Never thought I’d laugh while buying condoms *and* a coffin." – Ashley P.',
-      '"Their slogan got me, their service kept me." – Felix R.'
-      "“Best protection and best send-off. Genius.”",
-      "“I’ve never felt safer—or more prepared.”",
-      "“Their slogan alone sold me. But the products? Even better.”",
-      "“Coming and Going, LLC is the full lifecycle service.”",
-      "“From first night to final night. They got you.”",
-      "“Who knew condoms and coffins could be classy?”"
+      '"I came for the protection, stayed for the punchline." – Alex W.',
+      '"A box of giggles *and* a perfect coffin? Nailed it." – Terry L.',
+      '"Never thought I’d write a review mixing rubber and pine. 5 stars!" – Dana K.',
+      '"Their slogan alone got me covered. The products sealed the deal." – Jesse F.',
+      '"Finally, a brand that understands both the bedroom *and* the funeral." – Morgan B.',
+      '"I told my neighbor: ‘They cover you all the way.’ True story." – Pat S.'
     ];
-    let i = 0;
-
     let index = 0;
+    const testimonialBox = document.getElementById('testimonial');
+
     setInterval(() => {
-      document.getElementById('testimonialBox').innerText = testimonials[i];
-      i = (i + 1) % testimonials.length;
-      index = (index + 1) % testimonials.length;
-      document.getElementById("testimonial").innerText = testimonials[index];
-    }, 5000);
-  </script></body>
+      testimonialBox.classList.add('fade');
+      setTimeout(() => {
+        index = (index + 1) % testimonials.length;
+        testimonialBox.textContent = testimonials[index];
+        testimonialBox.classList.remove('fade');
+      }, 1000);
+    }, 10000); // rotate every 10 seconds
   </script>
 </body>
 </html>
